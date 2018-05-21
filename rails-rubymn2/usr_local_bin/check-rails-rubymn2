@@ -6,21 +6,7 @@ echo '#################################'
 echo 'BEGIN rails-rubymn2 sanity checks'
 echo '#################################'
 
-# BEGIN: activate rbenv
-export PATH="/home/winner/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-# END: activate rbenv
-
-# BEGIN: activate NVM
-export NVM_DIR="/home/winner/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-# END: activate NVM
-
-nvm use --lts # Activate Node
-
-echo '------------'
-echo 'phantomjs -v'
-phantomjs -v
+puts 'No additional sanity checks'
 
 echo '####################################'
 echo 'FINISHED rails-rubymn2 sanity checks'
