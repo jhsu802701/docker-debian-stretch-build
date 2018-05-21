@@ -18,7 +18,9 @@ export NVM_DIR="/home/winner/.nvm"
 
 nvm use --lts # Activate Node
 
-
+echo '------------'
+echo 'phantomjs -v'
+phantomjs -v
 
 echo '########################################'
 echo 'FINISHED rails-sessionizer sanity checks'

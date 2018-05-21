@@ -19,9 +19,22 @@ echo '####################################'
 echo 'BEGIN rails-sessionizer-root actions'
 echo '####################################'
 
-echo '**************************'
-echo 'Nothing to install as root'
-echo '**************************'
+echo '++++++++++++++++++++++++++++++++++++++++++++'
+echo 'BEGIN installing prerequisites for PhantomJS'
+
+# From https://github.com/OpenTwinCities/adopt-a-tree
+# and https://gist.github.com/julionc/7476620
+
+echo '---------------------------------------------------------------------------'
+echo 'apt-get install -y libffi-dev build-essential chrpath libssl-dev libxft-dev'
+apt-get install -y libffi-dev build-essential chrpath libssl-dev libxft-dev
+
+echo '----------------------------------------------------------------------------------'
+echo 'apt-get install -y libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev'
+apt-get install -y libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
+
+echo 'FINISHED installing prerequisites for PhantomJS'
+echo '+++++++++++++++++++++++++++++++++++++++++++++++'
 
 echo '#######################################'
 echo 'FINISHED rails-sessionizer-root actions'
