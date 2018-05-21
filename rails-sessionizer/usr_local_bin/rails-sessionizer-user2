@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# BEGIN: activate rbenv
+export PATH="/home/winner/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# END: activate rbenv
+
+# BEGIN: activate NVM
+export NVM_DIR="/home/winner/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# END: activate NVM
+
+nvm use --lts # Activate Node
+
+echo '------------'
+echo 'rbenv update'
+rbenv update
+
+echo '----------------'
+echo 'rbenv install -l'
+rbenv install -l
+
+echo '#####################################'
+echo 'BEGIN rails-sessionizer-user2 actions'
+echo '#####################################'
+
+echo '---------------------------------'
+echo 'npm install -g phantomjs-prebuilt'
+npm install -g phantomjs-prebuilt
+
+echo '------------'
+echo 'phantomjs -v'
+phantomjs -v
+
+echo '########################################'
+echo 'FINISHED rails-sessionizer-user2 actions'
+echo '########################################'

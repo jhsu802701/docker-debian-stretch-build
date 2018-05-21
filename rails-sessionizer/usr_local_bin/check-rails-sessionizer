@@ -1,0 +1,25 @@
+#!/bin/bash
+
+curl -ss https://raw.githubusercontent.com/rubyonracetracks/docker-debian-stretch-build/master/rails-general/usr_local_bin/check-rails-general | bash
+
+echo '#####################################'
+echo 'BEGIN rails-sessionizer sanity checks'
+echo '#####################################'
+
+# BEGIN: activate rbenv
+export PATH="/home/winner/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# END: activate rbenv
+
+# BEGIN: activate NVM
+export NVM_DIR="/home/winner/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# END: activate NVM
+
+nvm use --lts # Activate Node
+
+
+
+echo '########################################'
+echo 'FINISHED rails-sessionizer sanity checks'
+echo '########################################'
